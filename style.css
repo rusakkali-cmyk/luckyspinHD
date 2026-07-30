@@ -938,3 +938,36 @@ button:active{
     transform:translateY(0);
 
 }
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+
+    height:10px;
+
+    pointer-events:none;
+
+    animation:fall 3s linear forwards;
+
+}
+
+@keyframes fall{
+
+    from{
+
+        transform:translateY(-100px)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(120vh)
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
