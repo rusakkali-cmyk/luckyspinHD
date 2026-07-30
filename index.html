@@ -1,29 +1,261 @@
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/wheel.css">
-<link rel="stylesheet" href="css/popup.css">
-<link rel="stylesheet" href="css/animation.css">
-<link rel="stylesheet" href="css/responsive.css">
-<div class="wheel-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-    <div class="wheel-container">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="wheel-glow"></div>
+    <title>LuckyVerse | Lucky Spin Event</title>
 
-        <div class="pointer"></div>
+    <link rel="stylesheet" href="style.css">
 
-        <canvas id="wheel"
-                width="500"
-                height="500">
-        </canvas>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <div class="center-circle">
-            <span>★</span>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ===================== -->
+<!-- LOADING SCREEN -->
+<!-- ===================== -->
+
+<div id="loading">
+
+    <div class="loader"></div>
+
+    <h2>LuckyVerse</h2>
+
+    <p>Loading Event...</p>
+
+</div>
+
+<!-- ===================== -->
+<!-- BACKGROUND -->
+<!-- ===================== -->
+
+<div class="background"></div>
+
+<!-- ===================== -->
+<!-- MAIN -->
+<!-- ===================== -->
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>LuckyVerse</h1>
+
+            <span>Official Lucky Spin Event</span>
+
         </div>
+
+        <div class="online">
+
+            <span class="dot"></span>
+
+            <span id="onlineCount">183</span>
+
+            Online
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2>Try Your Luck Today</h2>
+
+        <p>
+
+            Enter your User ID and spin the lucky wheel.
+
+        </p>
+
+    </section>
+
+    <!-- LOGIN -->
+
+    <section class="login-card">
+
+        <input
+            type="text"
+            id="userID"
+            placeholder="Enter User ID">
+
+        <button id="checkBtn">
+
+            CHECK ID
+
+        </button>
+
+    </section>
+
+    <!-- WHEEL -->
+
+    <section class="wheel-section">
+
+        <div class="wheel-container">
+
+            <canvas id="wheel" width="500" height="500"></canvas>
+
+            <div class="pointer"></div>
+
+        </div>
+
+        <button id="spinBtn">
+
+            🎡 SPIN NOW
+
+        </button>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="card">
+
+            <h3>Total Spin</h3>
+
+            <span id="totalSpin">
+
+                0
+
+            </span>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Total Winner</h3>
+
+            <span id="winnerCount">
+
+                0
+
+            </span>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Jackpot</h3>
+
+            <span>
+
+                Rp500.000
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- LIVE WINNER -->
+
+    <section class="winner-box">
+
+        <h2>
+
+            🏆 Live Winners
+
+        </h2>
+
+        <div id="winnerList">
+
+        </div>
+
+    </section>
+
+    <!-- EVENT STATUS -->
+
+    <section class="event-box">
+
+        <div class="event-card">
+
+            <h3>
+
+                Event Status
+
+            </h3>
+
+            <span class="live">
+
+                ● LIVE
+
+            </span>
+
+            <div id="countdown">
+
+                05D : 12H : 48M
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- POPUP -->
+
+<div id="popup">
+
+    <div class="popup-content">
+
+        <h2>
+
+            🎉 Congratulations
+
+        </h2>
+
+        <p>
+
+            User ID
+
+        </p>
+
+        <h3 id="popupUser">
+
+            000000
+
+        </h3>
+
+        <h1 id="popupPrize">
+
+            Rp100.000
+
+        </h1>
+
+        <button id="claimBtn">
+
+            CLAIM PRIZE
+
+        </button>
 
     </div>
 
-    <button class="spin-btn" id="spinBtn">
-        SPIN NOW
-    </button>
-
 </div>
+
+<!-- AUDIO -->
+
+<audio id="spinSound" src="assets/spin.mp3"></audio>
+
+<audio id="winSound" src="assets/win.mp3"></audio>
+
+<audio id="clickSound" src="assets/click.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
