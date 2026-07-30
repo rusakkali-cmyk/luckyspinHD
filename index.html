@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lucky Spin</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+    <h1>🎡 Lucky Spin</h1>
+
+    <p class="subtitle">
+
+        Coba Keberuntunganmu Hari ini!
+
+    </p>
+
+    <div class="wheel-wrapper">
+
+        <div class="pointer"></div>
+
+        <canvas id="wheel"
+                width="500"
+                height="500">
+
+        </canvas>
+
+    </div>
+
+    <button id="spinBtn">
+
+        SPIN NOW
+
+    </button>
+
+    <div id="result">
+
+        Semoga Beruntung 🍀
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
