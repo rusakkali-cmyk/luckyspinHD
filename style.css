@@ -903,3 +903,38 @@ button:active{
     }
 
 }
+.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    background:#111827;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.3s;
+
+    z-index:99999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
