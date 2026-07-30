@@ -324,3 +324,102 @@ function showToast(text){
     },2500);
 
 }
+const onlineElement = document.getElementById("onlineCount");
+
+let online = 183;
+
+setInterval(() => {
+
+    const random = Math.floor(Math.random() * 7) - 3;
+
+    online += random;
+
+    if (online < 150) online = 150;
+
+    if (online > 350) online = 350;
+
+    onlineElement.innerHTML = online;
+
+}, 3000);
+const countdown = document.getElementById("countdown");
+
+let endDate = new Date();
+
+endDate.setDate(endDate.getDate() + 5);
+
+function updateCountdown(){
+
+    const now = new Date();
+
+    const distance = endDate - now;
+
+    const d = Math.floor(distance / 86400000);
+
+    const h = Math.floor((distance % 86400000)/3600000);
+
+    const m = Math.floor((distance % 3600000)/60000);
+
+    countdown.innerHTML =
+        `${d}D : ${h}H : ${m}M`;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+const winnerList = document.getElementById("winnerList");
+
+function randomID(){
+
+    return Math.floor(10000000 + Math.random()*90000000);
+
+}
+
+function addWinner(){
+
+    const div = document.createElement("div");
+
+    div.className="winner-item";
+
+    const prize =
+        prizes[
+            Math.floor(Math.random()*prizes.length)
+        ].text;
+
+    div.innerHTML=`
+
+        <span class="winner-id">
+
+        ID ${randomID()}
+
+        </span>
+
+        <span class="prize">
+
+        ${prize}
+
+        </span>
+
+    `;
+
+    winnerList.prepend(div);
+
+    if(winnerList.children.length>8){
+
+        winnerList.removeChild(
+
+            winnerList.lastChild
+
+        );
+
+    }
+
+}
+
+for(let i=0;i<5;i++){
+
+    addWinner();
+
+}
+
+setInterval(addWinner,6000);
