@@ -289,3 +289,617 @@ Glass Card
         0 15px 40px rgba(0,0,0,.35);
 
 }
+.login-card{
+
+    max-width:550px;
+
+    margin:0 auto 50px;
+
+    padding:30px;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.login-card input{
+
+    flex:1;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#fff;
+
+    border-radius:12px;
+
+    padding:15px 18px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.login-card input::placeholder{
+
+    color:#9fb0cf;
+
+}
+
+.login-card input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 18px rgba(0,229,255,.35);
+
+}
+
+.login-card button{
+
+    min-width:150px;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+        0 10px 30px rgba(0,229,255,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(0,229,255,.45);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   Wheel
+=========================== */
+
+.wheel-section{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.wheel-container{
+
+    width:520px;
+
+    height:520px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+#wheel{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    border:12px solid rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 0 40px rgba(0,229,255,.15),
+
+        inset 0 0 30px rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+   Pointer
+=========================== */
+
+.pointer{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:0;
+
+    border-left:22px solid transparent;
+
+    border-right:22px solid transparent;
+
+    border-top:45px solid var(--gold);
+
+    filter:drop-shadow(0 0 12px gold);
+
+}
+
+#spinBtn{
+
+    margin-top:35px;
+
+    padding:16px 45px;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Statistics
+=========================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:50px;
+
+}
+
+.card{
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:#cfdcff;
+
+}
+
+.card span{
+
+    font-size:32px;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Winner
+=========================== */
+
+.winner-box{
+
+    padding:30px;
+
+    margin-bottom:40px;
+
+}
+
+.winner-box h2{
+
+    margin-bottom:25px;
+
+}
+
+#winnerList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.winner-item{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:12px;
+
+    padding:15px 18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.winner-item:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.winner-id{
+
+    color:#9bdcff;
+
+}
+
+.prize{
+
+    color:var(--gold);
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Event Card
+=========================== */
+
+.event-card{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.live{
+
+    color:#00ff84;
+
+    font-weight:700;
+
+}
+
+#countdown{
+
+    margin-top:18px;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--gold);
+
+}
+#popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+#popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.popup-content{
+
+    width:420px;
+
+    max-width:92%;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    backdrop-filter:blur(20px);
+
+    animation:popup .35s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:translateY(40px) scale(.9);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0) scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.popup-content h1{
+
+    color:var(--gold);
+
+    margin:18px 0;
+
+    font-size:36px;
+
+}
+
+.popup-content h3{
+
+    color:var(--primary);
+
+    margin-top:10px;
+
+}
+
+#claimBtn{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:16px;
+
+}
+
+/* ===========================
+   Loading Screen
+=========================== */
+
+#loading{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#07111f;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:.5s;
+
+}
+
+#loading.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    border-top:6px solid var(--primary);
+
+    animation:spinLoader 1s linear infinite;
+
+}
+
+@keyframes spinLoader{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+#loading h2{
+
+    margin-top:20px;
+
+    color:var(--primary);
+
+}
+
+#loading p{
+
+    color:#9db1d7;
+
+    margin-top:8px;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+    border-radius:50px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .login-card{
+
+        flex-direction:column;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .wheel-container{
+
+        width:360px;
+
+        height:360px;
+
+    }
+
+    .hero h2{
+
+        font-size:34px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .container{
+
+        width:94%;
+
+        padding:25px 0;
+
+    }
+
+    .logo h1{
+
+        font-size:30px;
+
+    }
+
+    .hero h2{
+
+        font-size:28px;
+
+    }
+
+    .wheel-container{
+
+        width:280px;
+
+        height:280px;
+
+    }
+
+    #spinBtn{
+
+        width:100%;
+
+    }
+
+}
